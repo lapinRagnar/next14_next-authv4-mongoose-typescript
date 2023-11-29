@@ -1,3 +1,13 @@
+# le tuto
+https://www.youtube.com/watch?v=1SjqRn_Ira4&t=312s
+https://github.com/umairjameel321/next-auth-mongodb
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
