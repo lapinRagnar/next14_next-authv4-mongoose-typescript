@@ -19,12 +19,12 @@ const Register = () => {
     const password = e.target[1].value
 
     if (!isValidEmail(email)) {
-      setError("Email is invalid")
+      setError("L'email est invalide!")
       return
     }
 
     if (!password || password.length < 4) {
-      setError("Password is invalid")
+      setError("Le mot de passe est invalide!")
       return
     }
 
@@ -41,7 +41,7 @@ const Register = () => {
       })
 
       if (res.status === 400) {
-        setError("This email is already registered");
+        setError("Ce mail existe déjà!")
       }
 
       if (res.status === 200) {
@@ -50,7 +50,7 @@ const Register = () => {
       }
 
     } catch (error) {
-      setError("Error, try again");
+      setError("Erreur, veuillez reessayer!");
       console.log(error)
     }
 
