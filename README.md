@@ -2,7 +2,9 @@
 https://www.youtube.com/watch?v=1SjqRn_Ira4&t=312s
 https://github.com/umairjameel321/next-auth-mongodb
 
-
+## suite du tuto - A faire
+https://www.youtube.com/watch?v=sO5df9FVIT8&list=PL3i9po_eXL_pyNKBtAAK_gVBWG5d8yZS9&index=11&t=27s
+https://github.com/umairjameel321/next-auth-mongodb
 
 
 
