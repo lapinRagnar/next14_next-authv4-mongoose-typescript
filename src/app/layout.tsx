@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-        <div className='mx-auto max-w-5xl text-2xl gap-2 mb-10'>
+        <div className='mx-auto max-w-5xl text-1xl gap-2 mb-10'>
           <Navbar />
           {children}
         </div>
