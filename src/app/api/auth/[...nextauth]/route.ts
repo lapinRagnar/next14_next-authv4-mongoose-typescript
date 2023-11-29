@@ -41,31 +41,31 @@ export const authOptions: any = {
     }),
     // ...add more providers here
   ],
-  // callbacks: {
-  //   async signIn({ user, account }: { user: AuthUser; account: Account }) {
-  //     if (account?.provider == "credentials") {
-  //       return true;
-  //     }
-  //     if (account?.provider == "github") {
-  //       await connect();
-  //       try {
-  //         const existingUser = await User.findOne({ email: user.email });
-  //         if (!existingUser) {
-  //           const newUser = new User({
-  //             email: user.email,
-  //           });
+  callbacks: {
+    async signIn({ user, account }: { user: AuthUser; account: Account }) {
+      if (account?.provider == "credentials") {
+        return true;
+      }
+      if (account?.provider == "github") {
+        await connect();
+        try {
+          const existingUser = await User.findOne({ email: user.email });
+          if (!existingUser) {
+            const newUser = new User({
+              email: user.email,
+            });
 
-  //           await newUser.save();
-  //           return true;
-  //         }
-  //         return true;
-  //       } catch (err) {
-  //         console.log("Error saving user", err);
-  //         return false;
-  //       }
-  //     }
-  //   },
-  // },
+            await newUser.save();
+            return true;
+          }
+          return true;
+        } catch (err) {
+          console.log("Error saving user", err);
+          return false;
+        }
+      }
+    },
+  },
 };
 
 export const handler = NextAuth(authOptions);
