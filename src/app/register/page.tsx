@@ -2,12 +2,22 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react"
+import { useSession } from "next-auth/react"
 
 const Register = () => {
 
   const [error, setError] = useState("")
-  const router = useRouter();
+  const router = useRouter()
+
+  const { data: session, status: sessionStatus } = useSession()
+  console.log("la session", session)
+
+  useEffect(() => {
+    if (sessionStatus === "authenticated") {
+      router.replace("/dashboard")
+    }
+  }, [sessionStatus, router])
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -55,6 +65,10 @@ const Register = () => {
     }
 
 
+  }
+
+  if (sessionStatus === "loading") {
+    return <h1 className="flex min-h-screen flex-col items-center justify-start p-24">Chargement en cour...</h1>
   }
 
 
