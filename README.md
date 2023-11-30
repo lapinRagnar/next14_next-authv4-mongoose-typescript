@@ -10,8 +10,16 @@ https://github.com/umairjameel321/next-auth-mongodb
 #### mettre à jour les packages
 ```bash
 npm i next@latest react@latest react-dom@latest eslint-config-next@latest
+npm i @types/react@latest @types/react-dom@latest
 
 ```
+
+## sendgrid - pour l'envoi de mail
+https://sendgrid.com/en-us
+
+```
+npm i @sendgrid/mail
+```	
 
 
 
