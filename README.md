@@ -1,4 +1,4 @@
-# le tuto
+# le tuto - register and login - next-auth-mongodb setup 
 https://www.youtube.com/watch?v=1SjqRn_Ira4&t=312s
 https://github.com/umairjameel321/next-auth-mongodb
 
