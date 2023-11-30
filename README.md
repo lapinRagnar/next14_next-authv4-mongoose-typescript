@@ -14,6 +14,13 @@ npm i @types/react@latest @types/react-dom@latest
 
 ```
 
+## sendgrid - pour l'envoi de mail
+https://sendgrid.com/en-us
+
+```
+npm i @sendgrid/mail
+```	
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
