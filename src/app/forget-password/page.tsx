@@ -20,7 +20,7 @@ const ForgetPassword = () => {
   const isValidEmail = (email: string) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
     return emailRegex.test(email)
-  };
+  }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
@@ -32,7 +32,35 @@ const ForgetPassword = () => {
     }
 
 
-  };
+    try {
+      const res = await fetch("/api/forget-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      })
+
+      if (res.status === 400) {
+        setError("Ce mail n'est pas enregistré!")
+      }
+
+      if (res.status === 200) {
+        setError("");
+        router.push("/login");
+      }
+
+    } catch (error) {
+      setError("Erreur, veuillez reessayer!");
+      console.log(error)
+    }
+
+
+
+
+  }
 
   if (sessionStatus === "loading") {
     return <h1 className="flex min-h-screen flex-col items-center justify-start p-24">Chargement en cour...</h1>
