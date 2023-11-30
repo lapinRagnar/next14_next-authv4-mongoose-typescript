@@ -6,7 +6,12 @@ https://github.com/umairjameel321/next-auth-mongodb
 https://www.youtube.com/watch?v=sO5df9FVIT8&list=PL3i9po_eXL_pyNKBtAAK_gVBWG5d8yZS9&index=11&t=27s
 https://github.com/umairjameel321/next-auth-mongodb
 
+### les commandes 
+#### mettre à jour les packages
+```bash
+npm i next@latest react@latest react-dom@latest eslint-config-next@latest
 
+```
 
 
 
